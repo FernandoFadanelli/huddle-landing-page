@@ -1,0 +1,197 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body{
+  background-color: var(--violet);
+  color: white;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+/* ======================
+    Background images
+========================= */
+.background-img-desktop {
+  position: fixed;
+  z-index: -1;
+}
+
+.background-img-mobile {
+  display: none;
+}
+
+
+/* ======================
+     Grid positioning
+========================= */
+.main-grid {
+  align-items: center;
+  column-gap: 4%;
+  display: grid;
+  height: 100vh;
+  margin: 0 5%;
+}
+
+/* ======================
+          Logo
+========================= */
+.logo {
+  grid-column-end: 1;
+  justify-self: start;
+}
+
+/* ======================
+         Mockups
+========================= */
+.mockups {
+  grid-column-end: 1;
+  width: 100%;
+}
+
+/* ======================
+      Main text
+========================= */
+.main-text {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.register-button {
+  background-color: white;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: var(--violet);
+  /* padding: 5px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+}
+
+.register-button:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+  cursor: pointer;
+}
+
+/* ======================
+      Social icons
+========================= */
+.social-icons {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-self: end;
+  list-style: none;
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.icon:hover {
+  color: var(--soft-magenta);
+  cursor: pointer;
+}
+
+/* ======================
+      Mobile design
+========================= */
+@media only screen and (max-width: 750px) {
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* ======================
+      Background images
+  ========================= */
+  .background-img-desktop {
+    display: none;
+  }
+
+  .background-img-mobile {
+    display: inline;
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+  }
+
+  /* ======================
+       Grid positioning
+  ========================= */
+  .main-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    height: 100%;
+    text-align: center;
+  }
+
+  /* ======================
+            Logo
+  ========================= */
+  .logo {
+    align-self: flex-start;
+    margin: 5% 0 0 0;
+    height: 2rem;
+  }
+
+  /* ======================
+           Mockups
+  ========================= */
+  .mockups {
+    margin: 20% 0;
+  }
+
+  /* ======================
+        Main text
+  ========================= */
+  .register-button {
+    width: 220px;
+    height: 40px;
+    margin: 5% 0 20% 0;
+  }
+
+  /* ======================
+        Social icons
+  ========================= */
+  .social-icons {
+    justify-content: center;
+  }
+}
